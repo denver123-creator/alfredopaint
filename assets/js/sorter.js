@@ -33,9 +33,9 @@ async function sortImagesBySize() {
     // Generate HTML content for sorted images
     const sortedUsersWork = userWorks[0].workpics.map((workpic, index) => `
         <div class="col-4 col-6-medium col-12-small image-item">
-            <a href="#" class="image fit">
+            <div class="image fit">
                 <img src="${workpic}" alt="Work Image ${index + 1}">
-            </a>
+            </div>
         </div>
     `).join('');
 
