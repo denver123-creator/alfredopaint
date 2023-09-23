@@ -27,7 +27,7 @@ const userWorks = [{
         </header>
         <a href="#work" class="jumplink pic">
             <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-            <img src="${userData.profilepic}" alt="profile" st/>
+            <img src="${userData.profilepic}" alt="profile"/>
         </a>`;
 
     });
