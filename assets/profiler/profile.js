@@ -44,7 +44,7 @@ const userWorks = [{
             userWork.workpics.forEach((workpic, index) => {
                 usersWork += `
                         <div class="col-4 col-6-medium col-12-small" >
-                            <a href="#" class="image fit"><img src="${workpic}" alt="Work Image ${index + 1}"></a>
+                            <img src="${workpic}" alt="Work Image ${index + 1}" class="image fit">
                         </div>                
                 `;
             });
