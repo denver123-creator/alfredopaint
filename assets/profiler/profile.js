@@ -50,9 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('popstate', function (event) {
     const currentURL = window.location.href;
     const url1 = "https://denver123-creator.github.io/alfredopaint.io/#";
-
-       // You can now use the 'currentURL' variable to work with the current URL
-       console.log('Current URL:', currentURL);
        if(currentURL === url1 ){
             clearInterval(intervalId);
             intervalId = setInterval(showNextSlide, 3000);
