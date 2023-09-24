@@ -47,34 +47,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // Start the slideshow and store the interval ID
     intervalId = setInterval(showNextSlide, 5000);
 
-    const jumplink = document.querySelector('.jumplink');
-    const navLinks = document.getElementById('c');
-    const navLinksb = document.getElementById('b');
-    const navLinksa = document.getElementById('a');
-    const navLinksd = document.getElementById('d');
-
-
-
-    jumplink.addEventListener('click',()=> {
-        clearInterval(intervalId);
+    window.addEventListener('popstate', function (event) {
+    const currentURL = window.location.href;
+    const url = "http://127.0.0.1:5500/website/index.html#";
+    const url1 = "https://denver123-creator.github.io/alfredopaint.io/#";
+    console.log('Back button pressed');
+       // You can now use the 'currentURL' variable to work with the current URL
+       console.log('Current URL:', currentURL);
+       if(currentURL === url1 ){
+            clearInterval(intervalId);
+            intervalId = setInterval(showNextSlide, 3000);
+       }else{
+             clearInterval(intervalId);
+       }
     });
 
-    navLinks.addEventListener('click', ()=> {
-        clearInterval(intervalId);
-    });
-
-    navLinksb.addEventListener('click', ()=> {
-        clearInterval(intervalId);
-    });
-
-    navLinksd.addEventListener('click', ()=> {
-        clearInterval(intervalId);
-    });
-
-    navLinksa.addEventListener('click', ()=> {
-        clearInterval(intervalId);
-        intervalId = setInterval(showNextSlide, 3000);
-    });
    
   });
 
