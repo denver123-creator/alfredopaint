@@ -16,21 +16,87 @@ const userWorks = [{
                    "users/user1/workpic/pic18.jpg","users/user1/workpic/pic20.jpg","users/user1/workpic/pic07.jpg",           
     ]}];
 
-////////////////////////////////
-    let users = '';
 
-    user1.forEach((userData)=>{
-    users += `
-      <header>
-            <h1>${userData.name}</h1>
-            <p><strong>${userData.profession}</strong></p>
-        </header>
-        <a href="#work" class="jumplink pic">
-            <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-            <img src="${userData.profilepic}" alt="profile"/>
-        </a>`;
+const imagesForSlides = ['users/user1/workpic/pic01.jpg', 'users/user1/workpic/pic02.jpg', 'users/user1/workpic/pic05.jpg'];
+    
 
+//////////////////////////////
+
+document.addEventListener('DOMContentLoaded', function () {
+    
+    const slideImage = document.getElementById('slideImage');
+    const imagesForSlides = ['users/user1/workpic/pic01.jpg', 'users/user1/workpic/pic02.jpg', 'users/user1/workpic/pic05.jpg'];
+    let slideIndex = 0;
+    let intervalId; // Declare a variable to store the interval ID
+  
+    function updateSlideImage() {
+      setTimeout(function () {
+        slideImage.src = imagesForSlides[slideIndex];
+        slideImage.classList.remove('fade');
+      }, 1000);
+    }
+  
+    function showNextSlide() {
+      slideIndex = (slideIndex + 1) % imagesForSlides.length;
+      slideImage.classList.add('fade');
+      updateSlideImage();
+    }
+  
+    updateSlideImage();
+  
+    // Start the slideshow and store the interval ID
+    intervalId = setInterval(showNextSlide, 3000);
+
+    const jumplink = document.querySelector('.jumplink');
+    const navLinks = document.getElementById('c');
+    const navLinksb = document.getElementById('b');
+    const navLinksa = document.getElementById('a');
+    const navLinksd = document.getElementById('d');
+
+
+
+    jumplink.addEventListener('click',()=> {
+        clearInterval(intervalId);
     });
+
+    navLinks.addEventListener('click', ()=> {
+        clearInterval(intervalId);
+    });
+
+    navLinksb.addEventListener('click', ()=> {
+        clearInterval(intervalId);
+    });
+
+    navLinksd.addEventListener('click', ()=> {
+        clearInterval(intervalId);
+    });
+
+    navLinksa.addEventListener('click', ()=> {
+        clearInterval(intervalId);
+        intervalId = setInterval(showNextSlide, 3000);
+    });
+   
+  });
+
+////////////////////////////////
+
+
+
+let html = '';
+
+html += `
+  <header>
+    <h1>${user1[0].name}</h1>
+    <p><strong>${user1[0].profession}</strong></p>
+  </header>
+
+  <a href="#work" class="jumplink pic">
+  <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+  <div class="mySlides">
+    <img src="${imagesForSlides[0]}" alt="profile" style="width:100%" id="slideImage" />
+  </div>
+</a>
+`;
 
 //////////////////////////////////
 
@@ -54,7 +120,7 @@ const userWorks = [{
         });
 ///////////////////////////////////
 
-document.querySelector('.intro').innerHTML = users;   
+document.querySelector('.intro').innerHTML = html;   
 document.getElementById('works').innerHTML = usersWork; 
 
 
