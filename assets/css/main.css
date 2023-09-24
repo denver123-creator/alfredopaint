@@ -2206,6 +2206,7 @@ input, select, textarea {
 
 #work h2 {
 	display: flex;
-    justify-content: center;
+        justify-content: center;
+	margin-bottom: 13px;
 }
 
