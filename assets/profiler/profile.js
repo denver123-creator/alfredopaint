@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     updateSlideImage();
   
     // Start the slideshow and store the interval ID
-    intervalId = setInterval(showNextSlide, 3000);
+    intervalId = setInterval(showNextSlide, 5000);
 
     const jumplink = document.querySelector('.jumplink');
     const navLinks = document.getElementById('c');
