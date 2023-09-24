@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('popstate', function (event) {
     const currentURL = window.location.href;
-    const url = "http://127.0.0.1:5500/website/index.html#";
     const url1 = "https://denver123-creator.github.io/alfredopaint.io/#";
     console.log('Back button pressed');
        // You can now use the 'currentURL' variable to work with the current URL
