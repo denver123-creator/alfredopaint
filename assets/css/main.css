@@ -2217,3 +2217,38 @@ input, select, textarea {
 #contact p {
 	color: red;
 }
+
+
+.mySlides img {
+	width: 100%;
+	height: auto;
+	transition: opacity 1s;
+  }
+
+
+  @keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+	.text {font-size: 11px}
+  }
+
+  
+  @keyframes fade {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  
+  /* Apply the fade effect to an element with the "fade" class */
+  .fade {
+	opacity: 0; /* Start with 0 opacity */
+	transition: opacity 1s ease-in-out; /* Transition the opacity property over 1 second with ease-in-out timing function */
+  }
+
