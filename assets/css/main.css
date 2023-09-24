@@ -2210,3 +2210,6 @@ input, select, textarea {
 	margin-bottom: 13px;
 }
 
+#work p {
+	text-align: center;
+}
