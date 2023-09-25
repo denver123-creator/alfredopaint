@@ -2289,9 +2289,6 @@ input, select, textarea {
 	margin-top: 50px;
   }
 
-  @media only screen and (max-width: 723px) {
-	#submit-icon {margin-top: 60px;}
-  }
 
 
   #submit-icon button {
