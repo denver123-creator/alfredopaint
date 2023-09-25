@@ -2275,7 +2275,7 @@ input, select, textarea {
 	align-self: center;
 	position: relative; /* Make sure the parent is not static */
 	align-items: center; /* Vertically center-align the child elements */
-	margin-top: 50px;
+	margin-top: 10px;
   }
 
   #userInput input {
