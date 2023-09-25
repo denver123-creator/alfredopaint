@@ -2260,6 +2260,10 @@ input, select, textarea {
     justify-content: center;
   }
 
+  #ai P{
+	text-align:justify;
+  }
+
   #aiImage {
 	padding: 0;
 	margin: 0;
