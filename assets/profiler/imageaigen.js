@@ -24,7 +24,7 @@ async function query(data) {
         const response = await fetch(
             "https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5",
             {
-                headers: { Authorization: "Bearer " },
+                headers: { Authorization: "Bearer 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" },
                 method: "POST",
                 body: JSON.stringify(data),
             }
