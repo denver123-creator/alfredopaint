@@ -7,9 +7,7 @@ const imageContainer = document.querySelector('.generatedImage');
 async function query(data) {
 
     if(inputQuery.value == ""){
-        console.log("no data");
         inputQuery.style.borderColor = "red";
-   
         return;
     }
 
