@@ -2401,3 +2401,60 @@ input, select, textarea {
 margin-top: 10%;
 }
 
+
+
+#product {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+#product-box {
+	border: 2px solid #ddd;
+	padding: 20px;
+	background-color: rgb(164, 184, 187);
+	display: flex;
+	flex-direction: column;
+	width: 100%; 
+	max-width: 700px; 
+	margin: 0; 
+	box-sizing: border-box; 
+	margin: 2rem 0;
+  }
+
+  #product-box p{
+	margin: 1rem 0;
+
+  }
+
+  #product-box img{
+	max-width: 100%;
+	height: auto;
+  }
+
+  #product-box h2{
+  font-size: 24px; 
+  color: #333;
+  text-align: center;
+  margin: 1rem 0;
+  padding-top: 1em;
+
+  }
+
+  .product-content p:first-child {
+	font-size: 20px;
+	color: rgb(80, 6, 17);
+	margin-top: 10px;
+	text-align: center;
+  }
+
+  #product-box .product-content p:nth-child(2) {
+	color: #368607;
+	font-size: large;
+	font-weight: bolder;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+
+
