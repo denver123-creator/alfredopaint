@@ -2401,14 +2401,15 @@ input, select, textarea {
 margin-top: 10%;
 }
 
-
-
 #product {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
+#product p{
+	margin: 1em;
+}
 
 #product-box {
 	border: 2px solid #ddd;
