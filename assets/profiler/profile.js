@@ -14,14 +14,39 @@ const userWorks = [{
                    "users/user1/workpic/pic13.jpg","users/user1/workpic/pic14.jpg","users/user1/workpic/pic15.jpg",
                    "users/user1/workpic/pic16.jpg","users/user1/workpic/pic17.jpg","users/user1/workpic/pic19.jpg",
                    "users/user1/workpic/pic18.jpg","users/user1/workpic/pic20.jpg","users/user1/workpic/pic07.jpg",           
-    ]}];
+]}];
+
+const userProducts = [{
+
+        title: "Guns and Roses",
+        description: `A captivating painting of two vibrant,fully blossomed roses, 
+        radiating timeless beauty and romance with meticulous attention 
+        to detail and expert rendering.`,
+        image: "users/user1/product-image/1.jpg",
+        price: 99.99
+     },{
+        title: "House of the Rising Sun",
+        description: `There is a house way down in New Orleans
+        They call the Rising Sun
+        And it's been the ruin of many a poor boy
+        And God I know I'm one.`,
+        image: "users/user1/product-image/2.jpg",
+        price: 999.99
+    }, {
+        title: "Hotel California",
+        description: `Welcome to the Hotel California
+        Such a lovely place 
+        Plenty of room at the Hotel California
+        Any time of year
+        You can find it here.`,
+        image: "users/user1/product-image/3.jpg",
+        price: 9999.99  
+}];  
 
 
+//////////////page 1 home page//////////////
 const imagesForSlides = ['users/user1/workpic/pic01.jpg', 'users/user1/workpic/pic02.jpg', 'users/user1/workpic/pic05.jpg'];
     
-
-//////////////////////////////
-
 document.addEventListener('DOMContentLoaded', function () {
     
     const slideImage = document.getElementById('slideImage');
@@ -56,18 +81,13 @@ document.addEventListener('DOMContentLoaded', function () {
        }else{
              clearInterval(intervalId);
        }
-    });
-
-   
+    });  
   });
 
-////////////////////////////////
 
+let homePage = '';
 
-
-let html = '';
-
-html += `
+homePage += `
   <header>
     <h1>${user1[0].name}</h1>
     <p><strong>${user1[0].profession}</strong></p>
@@ -81,29 +101,44 @@ html += `
 </a>
 `;
 
-//////////////////////////////////
-
-        let usersWork = '';
+/////////////// Work page page 2 /////////////////
+  let wokPage = '';
 
         userWorks.forEach((userWork) => {
-            usersWork += `
+          wokPage += `
                 <section>
-                    <div class="row">        
-            `;
+                    <div class="row"> `;
             userWork.workpics.forEach((workpic, index) => {
-                usersWork += `
+              wokPage += `
                         <div class="col-4 col-6-medium col-12-small" >
-                            <img src="${workpic}" alt="Work Image ${index + 1}" class="image fit">
-                        </div>                
-                `;
-            });
-            usersWork += `
-                </section>
-            `;
+                           <img src="${workpic}" alt="Work Image ${index + 1}" class="image fit">
+                        </div>`;});
+              wokPage += `
+                </section>`;
         });
-///////////////////////////////////
+////////////// Product page 3 ///////////////////
 
-document.querySelector('.intro').innerHTML = html;   
-document.getElementById('works').innerHTML = usersWork; 
+            let productPage = "";
+
+            userProducts.forEach((userProduct) => {
+
+              productPage += `
+                        <div id="product-box">
+                        <img src="${userProduct.image}" alt="Product Image">
+                            <h2>"${userProduct.title}"</h2>
+                              <div class="product-content">
+                              <p>${userProduct.description}</p>
+                              <p>$ ${userProduct.price}</p>
+                              <button >Buy now</button>
+                            </div>
+                          </div>`
+            });
+
+////////////////////////////////////////////
+
+
+document.querySelector('.intro').innerHTML = homePage;   
+document.getElementById('works').innerHTML = wokPage; 
+document.querySelector('.products').innerHTML = productPage;
 
 
