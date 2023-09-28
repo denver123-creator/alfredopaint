@@ -50,7 +50,7 @@ let isSorted = false;
 // Function to toggle between sorted by name and sorted by size
 function toggleImagesSort() {
     if (isSorted) {
-        document.getElementById('works').innerHTML = usersWork;
+        document.getElementById('works').innerHTML = wokPage;
     } else {
         sortImagesByName(); // Sort by name
     }
