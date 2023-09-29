@@ -2462,4 +2462,36 @@ margin-top: 10%;
   	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
+ .popup {
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 14px;
+	z-index: 9999;
+	width: auto;
+	display: none;
+}
+
+.hide {
+	display: none;
+}
+
+@media screen {
+	
+}
+
+@media screen and (max-width: 424px) {
+	.popup {
+
+		bottom: 10px;
+		width: 90%;
+
+
+	}
+}
 
