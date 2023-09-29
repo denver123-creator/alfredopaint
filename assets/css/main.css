@@ -2477,17 +2477,31 @@ margin-top: 10%;
 	display: none;
 }
 
-@media screen {
-	
-}
-
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 756px) {
 	.popup {
 
 		bottom: 10px;
-		width: 90%;
-
+		width: 80%;
 
 	}
 }
 
+@media screen and (max-width: 386px) {
+	.popup {
+
+		bottom: 10px;
+		width: 50%;
+		height: 120px;
+
+	}
+}
+
+@media screen and (max-width: 312px) {
+	.popup {
+
+		bottom: 10px;
+		width: 50%;
+		height: 230px;
+
+	}
+}
