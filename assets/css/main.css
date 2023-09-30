@@ -2477,30 +2477,44 @@ margin-top: 10%;
 	display: none;
 }
 
+
 @media screen and (max-width: 756px) {
 	.popup {
 
 		bottom: 10px;
 		width: 80%;
+		font-size: 12px;
+		padding-top: 1.5rem;
 
 	}
 }
 
-@media screen and (max-width: 386px) {
-	.popup {
 
+@media screen and (max-width: 416px) {
+	.popup {
 		bottom: 10px;
-		width: 100%;
-		height: 50px;
+		width: 90%;
+		height: 80px;
 	}
 }
 
-@media screen and (max-width: 312px) {
+
+@media screen and (max-width: 372px) {
+	.popup {
+		bottom: 10px;
+		width: 90%;
+		font-size: 10px;
+		padding-top: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 360px) {
 	.popup {
 
 		bottom: 10px;
-		width: 50%;
-		height: 230px;
+		width: 90%;
+		font-size: 9px;
+		padding-top: 1.5rem;
 
 	}
 }
