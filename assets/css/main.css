@@ -2556,12 +2556,12 @@ margin-top: 10%;
 	width: 100%;
 	cursor: pointer;
 	transform: scale(1);
-	transition: transform 0.5s ease;
+	transition: transform 0.6s ease;
 	box-shadow: none;
 }
 
 .img-gallery img:hover{
-	transform: scale(0.8) rotate(-15deg);
+	transform: scale(1.1) rotate(-1deg);
 	border-radius: 20px;
 	box-shadow: 0 32px 75px rgba(23, 23, 24, 0.2);
 }
