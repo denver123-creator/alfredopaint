@@ -102,20 +102,28 @@ homePage += `
 `;
 
 /////////////// Work page page 2 /////////////////
-  let wokPage = '';
 
-        userWorks.forEach((userWork) => {
-          wokPage += `
-                <section>
-                    <div class="row"> `;
-            userWork.workpics.forEach((workpic, index) => {
-              wokPage += `
-                        <div class="col-4 col-6-medium col-12-small" >
-                           <img src="${workpic}" alt="Work Image ${index + 1}" class="image fit">
-                        </div>`;});
-              wokPage += `
-                </section>`;
-        });
+let workPage = '';
+
+userWorks.forEach((userWork) => {
+  workPage += `
+    <section>
+      <div class="row">`;
+
+  userWork.workpics.forEach((workpic, index) => {
+    workPage += `
+      <div class="col-4 col-6-medium col-12-small img-gallery">
+        <img src="${workpic}" alt="Work Image ${index + 1}" class="image fit" data-index="${index}">
+      </div>
+    `;
+  });
+
+  workPage += `
+      </div>
+    </section>
+  `;
+});
+  
 ////////////// Product page 3 ///////////////////
 
             let productPage = "";
@@ -138,7 +146,42 @@ homePage += `
 
 
 document.querySelector('.intro').innerHTML = homePage;   
-document.getElementById('works').innerHTML = wokPage; 
+document.getElementById('works').innerHTML = workPage; 
 document.querySelector('.products').innerHTML = productPage;
+
+
+/////////////// Work page page 2 imgage zoomer  //////////////
+const fullImgBox = document.getElementById('fullImgBox');
+const fullImg = document.getElementById('fullImg');
+const closeImage = document.getElementById('closeImage');
+
+const thumbnailImages = document.querySelectorAll('.img-gallery img');
+const ings = document.querySelector('.row');
+
+
+function openImg(event) {
+  const index = event.target.getAttribute('data-index');
+  const imageUrl = userWorks[0].workpics[index];
+
+  fullImg.src = imageUrl;
+  fullImgBox.style.display = 'flex';
+
+}
+
+function closeImg() {
+  fullImgBox.style.display = 'none';
+
+}
+
+thumbnailImages.forEach((img) => {
+  img.addEventListener('click', openImg);
+ 
+});
+
+closeImage.addEventListener('click', closeImg);
+
+////////////////////////////////////////////////////////
+
+
 
 
