@@ -2466,7 +2466,7 @@ margin-top: 10%;
 
 #product-box img:hover{
 	transform: scale(1.03);
-	box-shadow: 20px 20px 10px grey;
+	box-shadow: 20px 20px 10px rgb(31, 24, 24);
   }
 
 .popup {
