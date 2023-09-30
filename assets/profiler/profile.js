@@ -5,7 +5,6 @@ const user1 = [{
     workpics: []
 }];
 
-
 const userWorks = [{
         workpics:[ "users/user1/workpic/pic01.jpg","users/user1/workpic/pic02.jpg","users/user1/workpic/pic04.jpg",
                    "users/user1/workpic/pic03.jpg","users/user1/workpic/pic05.jpg","users/user1/workpic/pic06.jpg",
@@ -42,7 +41,6 @@ const userProducts = [{
         image: "users/user1/product-image/3.jpg",
         price: 9999.99  
 }];  
-
 
 //////////////page 1 home page//////////////
 const imagesForSlides = ['users/user1/workpic/pic01.jpg', 'users/user1/workpic/pic02.jpg', 'users/user1/workpic/pic05.jpg'];
@@ -84,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });  
   });
 
-
 let homePage = '';
 
 homePage += `
@@ -92,7 +89,6 @@ homePage += `
     <h1>${user1[0].name}</h1>
     <p><strong>${user1[0].profession}</strong></p>
   </header>
-
   <a href="#work" class="jumplink pic">
   <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
   <div class="mySlides">
@@ -100,7 +96,6 @@ homePage += `
   </div>
 </a>
 `;
-
 /////////////// Work page page 2 /////////////////
 
 let workPage = '';
@@ -126,24 +121,23 @@ userWorks.forEach((userWork) => {
   
 ////////////// Product page 3 ///////////////////
 
-            let productPage = "";
+let productPage = "";
 
-            userProducts.forEach((userProduct) => {
+userProducts.forEach((userProduct) => {
 
-              productPage += `
-                        <div id="product-box">
-                        <img src="${userProduct.image}" alt="Product Image">
-                            <h2>"${userProduct.title}"</h2>
-                              <div class="product-content">
-                              <p>${userProduct.description}</p>
-                              <p>$ ${userProduct.price}</p>
-                              <button >Buy now</button>
-                            </div>
-                          </div>`
-            });
+  productPage += `
+    <div id="product-box">
+    <img src="${userProduct.image}" alt="Product Image">
+        <h2>"${userProduct.title}"</h2>
+          <div class="product-content">
+          <p>${userProduct.description}</p>
+          <p>$ ${userProduct.price}</p>
+          <button >Buy now</button>
+        </div>
+      </div>`
+});
 
 ////////////////////////////////////////////
-
 
 document.querySelector('.intro').innerHTML = homePage;   
 document.getElementById('works').innerHTML = workPage; 
@@ -158,19 +152,16 @@ const closeImage = document.getElementById('closeImage');
 const thumbnailImages = document.querySelectorAll('.img-gallery img');
 const ings = document.querySelector('.row');
 
-
 function openImg(event) {
   const index = event.target.getAttribute('data-index');
   const imageUrl = userWorks[0].workpics[index];
 
   fullImg.src = imageUrl;
   fullImgBox.style.display = 'flex';
-
 }
 
 function closeImg() {
   fullImgBox.style.display = 'none';
-
 }
 
 thumbnailImages.forEach((img) => {
