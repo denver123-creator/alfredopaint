@@ -2490,9 +2490,8 @@ margin-top: 10%;
 	.popup {
 
 		bottom: 10px;
-		width: 50%;
-		height: 120px;
-
+		width: 100%;
+		height: 50px;
 	}
 }
 
