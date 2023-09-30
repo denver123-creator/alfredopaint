@@ -2430,9 +2430,9 @@ margin-top: 10%;
 
   #product-box p{
 	color: rgb(24, 22, 22);
-	margin: 1em;
 	text-align: center;
-
+	margin: 1rem 0;
+	margin-top: 0.3em;
   }
 
   #product-box img{
@@ -2445,7 +2445,6 @@ margin-top: 10%;
   font-size: 24px; 
   color: #333;
   text-align: center;
-  margin: 1rem 0;
   padding-top: 1em;
 
   }
