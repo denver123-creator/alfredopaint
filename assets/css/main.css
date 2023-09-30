@@ -2409,7 +2409,9 @@ margin-top: 10%;
 }
 
 #product p{
+	color: rgb(24, 22, 22);
 	margin: 1em;
+	text-align: center;
 }
 
 #product-box {
