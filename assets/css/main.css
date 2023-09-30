@@ -2462,7 +2462,7 @@ margin-top: 10%;
   	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
- .popup {
+.popup {
 	position: fixed;
 	bottom: 10px;
 	left: 50%;
@@ -2475,6 +2475,7 @@ margin-top: 10%;
 	z-index: 9999;
 	width: auto;
 	display: none;
+	padding-top: 1.8rem;
 }
 
 
@@ -2482,43 +2483,59 @@ margin-top: 10%;
 	.popup {
 
 		bottom: 10px;
-		width: 80%;
-		font-size: 12px;
+		width: 90%;
 		padding-top: 1.5rem;
+		padding-left: 0;
+		padding-right: 0;
 
 	}
 }
-
 
 @media screen and (max-width: 416px) {
 	.popup {
 		bottom: 10px;
 		width: 90%;
-		height: 80px;
+		padding-top: 1.5rem;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
-
-@media screen and (max-width: 372px) {
+@media screen and (max-width: 383px) {
 	.popup {
 		bottom: 10px;
 		width: 90%;
-		font-size: 10px;
 		padding-top: 1.5rem;
+		padding-left: 0;
+		padding-right: 0;
+		font-size: 13px;
 	}
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 358px) {
 	.popup {
-
 		bottom: 10px;
 		width: 90%;
-		font-size: 9px;
 		padding-top: 1.5rem;
+		padding-left: 0;
+		padding-right: 0;
+		font-size: 12px;
 
 	}
 }
 
+
+@media screen and (max-width: 328px) {
+	.popup {
+		bottom: 10px;
+		width: 90%;
+		padding-top: 1.5rem;
+		padding-left: 0;
+		padding-right: 0;
+		font-size: 11px;
+
+	}
+}
 
 .img-gallery{
 	width: 70%;
