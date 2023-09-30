@@ -2425,16 +2425,20 @@ margin-top: 10%;
 	margin: 0; 
 	box-sizing: border-box; 
 	margin: 2rem 0;
+	box-shadow: 20px 20px 10px grey;
   }
 
   #product-box p{
-	margin: 1rem 0;
+	color: rgb(24, 22, 22);
+	margin: 1em;
+	text-align: center;
 
   }
 
   #product-box img{
 	max-width: 100%;
 	height: auto;
+	transition: transform 0.5s ease, box-shadow 0.3s ease;
   }
 
   #product-box h2{
@@ -2462,7 +2466,7 @@ margin-top: 10%;
 
 #product-box img:hover{
 	transform: scale(1.1);
-  	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
 .popup {
