@@ -18,19 +18,6 @@ function showMessagePopup() {
     showMessagePopup();
 
 
-  window.addEventListener('popstate', function (event) {
-            const navTwos = document.querySelector('.popup');
-            const bodyElement = document.body;
-            const currentURL = window.location.href;
-            const url = "https://denver123-creator.github.io/alfredopaint.io/#";
-               if(currentURL === url){
-                    navTwos.style.display = "none";
-                    bodyElement.style.overflow = "hidden";
-               }else {
-                    bodyElement.style.overflow = "";
-               }
-            });
-
 
     window.addEventListener("scroll", function() {
         const navTwo = document.querySelector('.popup');
@@ -46,6 +33,19 @@ function showMessagePopup() {
         }else{
             navTwo.style.display = "none";
         }
+ 
+  window.addEventListener('popstate', function (event) {
+            const bodyElement = document.body;
+            const currentURL = window.location.href;
+            const url = "https://denver123-creator.github.io/alfredopaint.io/#";
+               if(currentURL === url){
+                    navTwo.style.display = "none";
+                    bodyElement.style.overflow = "hidden";
+               }else {
+                    bodyElement.style.overflow = "";
+               }
+            });
+        
         });
 
 
