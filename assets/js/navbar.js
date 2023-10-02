@@ -18,35 +18,45 @@ function showMessagePopup() {
     showMessagePopup()
 
 
-
     window.addEventListener("scroll", function() {
         const navTwo = document.querySelector('.popup');
         const mainElement = document.getElementById('main');
         const homeElement = document.getElementById('home'); 
         const distanceFromTop = mainElement.getBoundingClientRect().top;
+
+
         const triggerScrollPosition = 120; 
+
         const homeHeight = homeElement.getBoundingClientRect().height;
         const isAtTop = window.scrollY === triggerScrollPosition;
 
         if (isAtTop || distanceFromTop <= homeHeight - triggerScrollPosition ) {
-            navTwo.style.display = "block";
-        }else{
-            navTwo.style.display = "none";
+
+            navTwo.style.display = "block"; 
+        } else {
+          navTwo.style.display = "none"; 
         }
- 
-  window.addEventListener('popstate', function (event) {
-            const bodyElement = document.body;
-            const currentURL = window.location.href;
-            const url = "https://denver123-creator.github.io/alfredopaint.io/#";
-            const url2 = "https://denver123-creator.github.io/alfredopaint.io/";
-               if(currentURL === url || currentURL === url2){
-                    navTwo.style.display = "none";
-                    bodyElement.style.overflow = "hidden";
-               }else {
-                    bodyElement.style.overflow = "";
-               }
-            });
-        
+
         });
 
 
+
+        window.onload = function(){
+
+            window.addEventListener('popstate', function (event) {
+            
+                const navTwo = document.querySelector('.popup');
+                const bodyElement = document.body;
+                const currentURL = window.location.href;
+                const url = "https://denver123-creator.github.io/alfredopaint.io/#";
+                const url2 = "https://denver123-creator.github.io/alfredopaint.io/";
+                   if(currentURL === url || currentURL === url2 ){
+                        navTwo.style.display = "none";
+                        bodyElement.style.overflow = "hidden";
+                   }else {
+                         bodyElement.style.overflow = "";
+                   }
+       
+                });
+    
+        };
