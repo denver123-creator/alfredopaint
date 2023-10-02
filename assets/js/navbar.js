@@ -38,7 +38,8 @@ function showMessagePopup() {
             const bodyElement = document.body;
             const currentURL = window.location.href;
             const url = "https://denver123-creator.github.io/alfredopaint.io/#";
-               if(currentURL === url){
+            const url2 = "https://denver123-creator.github.io/alfredopaint.io/";
+               if(currentURL === url || currentURL === url2){
                     navTwo.style.display = "none";
                     bodyElement.style.overflow = "hidden";
                }else {
