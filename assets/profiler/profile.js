@@ -158,10 +158,12 @@ function openImg(event) {
 
   fullImg.src = imageUrl;
   fullImgBox.style.display = 'flex';
+
 }
 
 function closeImg() {
   fullImgBox.style.display = 'none';
+
 }
 
 thumbnailImages.forEach((img) => {
@@ -170,7 +172,6 @@ thumbnailImages.forEach((img) => {
 });
 
 closeImage.addEventListener('click', closeImg);
-
 ////////////////////////////////////////////////////////
 
 
