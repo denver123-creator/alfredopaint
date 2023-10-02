@@ -2498,7 +2498,7 @@ margin-top: 10%;
 	font-size: 14px;
 	z-index: 9999;
 	width: auto;
-	display: none;
+	display: block;
 	padding-top: 1.8rem;
 }
 
