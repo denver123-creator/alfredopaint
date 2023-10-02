@@ -15,7 +15,7 @@ function showMessagePopup() {
     wrapper.appendChild(popup);
     }
 
-    showMessagePopup();
+    showMessagePopup()
 
 
 
