@@ -17,35 +17,34 @@ function showMessagePopup() {
 
     showMessagePopup()
 
-    window.addEventListener("scroll", function() {
-            
+     window.addEventListener("scroll", function() {
         const navTwo = document.querySelector('.popup');
         const mainElement = document.getElementById('main');
+        const homeElement = document.getElementById('home'); 
         const distanceFromTop = mainElement.getBoundingClientRect().top;
         const triggerScrollPosition = 120; 
-        const isAtTop = triggerScrollPosition;
+        const homeHeight = homeElement.getBoundingClientRect().height;
+        const isAtTop = window.scrollY === triggerScrollPosition;
 
-        if (distanceFromTop <= isAtTop ) {
-            //navTwo.style.display = "block";  
+        if (isAtTop || distanceFromTop <= homeHeight - triggerScrollPosition ) {
+            navTwo.style.display = "block";  
             function showPopup() {
-                 // Show the popup
-                 navTwo.style.display = 'block';
                 setTimeout(() => {
-                 // Set opacity to 1 after a short delay
-                    navTwo.style.opacity = '1'; 
+                  navTwo.style.opacity = '1';
                 }, 10);
-              }
+              }  
               return showPopup();
         } else {
             function hidePopup() {
-                navTwo.style.opacity = '0'; // Set opacity to 0
+                navTwo.style.opacity = '0'; 
                 setTimeout(() => {
-                    navTwo.style.display = 'none'; // Hide the popup after the fade-out effect
-                }, 1000); // This should match the duration of the CSS transition (0.5s)
+                    navTwo.style.display = 'none'; 
+                }, 1000);
               }
               return hidePopup()
         }
-});
+    });
+
 
 
   window.addEventListener('popstate', function (event) {
