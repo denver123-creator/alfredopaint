@@ -2525,6 +2525,7 @@ margin-top: 10%;
 	width: auto;
 	display: none;
 	padding-top: 1.8rem;
+	transition: opacity 0.5s ease;
 }
 
 
