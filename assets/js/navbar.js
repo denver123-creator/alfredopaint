@@ -58,8 +58,8 @@ window.addEventListener("scroll", function() {
 window.onload = function() {
   window.addEventListener('popstate', function(event) {
     const currentURL = window.location.href;
-    const url = "http://127.0.0.1:5500/website/index.html";
-    const url2 = "http://127.0.0.1:5500/website/index.html#";
+    const url = "https://denver123-creator.github.io/alfredopaint.io/#";
+    const url2 = "https://denver123-creator.github.io/alfredopaint.io/";
 
     if (currentURL === url || currentURL === url2) {
       navTwo.style.display = "none";
