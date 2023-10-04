@@ -37,7 +37,7 @@ const userProducts = [{
         description: `A captivating painting of two vibrant,fully blossomed roses, 
         radiating timeless beauty and romance with meticulous attention 
         to detail and expert rendering.`,
-        image: "users/user1/product-image/1.jpg",
+        image: "users/user1/product-image/1.webp",
         price: 99.99
      },{
         title: "House of the Rising Sun",
@@ -45,7 +45,7 @@ const userProducts = [{
         They call the Rising Sun
         And it's been the ruin of many a poor boy
         And God I know I'm one.`,
-        image: "users/user1/product-image/2.jpg",
+        image: "users/user1/product-image/2.webp",
         price: 999.99
     }, {
         title: "Hotel California",
@@ -54,7 +54,7 @@ const userProducts = [{
         Plenty of room at the Hotel California
         Any time of year
         You can find it here.`,
-        image: "users/user1/product-image/3.jpg",
+        image: "users/user1/product-image/3.webp",
         price: 9999.99  
 }];  
 
