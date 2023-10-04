@@ -6,14 +6,30 @@ const user1 = [{
 }];
 
 const userWorks = [{
-        workpics:[ "users/user1/workpic/pic01.jpg","users/user1/workpic/pic02.jpg","users/user1/workpic/pic04.jpg",
-                   "users/user1/workpic/pic03.jpg","users/user1/workpic/pic05.jpg","users/user1/workpic/pic06.jpg",
-                   "users/user1/workpic/pic21.jpg","users/user1/workpic/pic08.jpg","users/user1/workpic/pic09.jpg",
-                   "users/user1/workpic/pic10.jpg","users/user1/workpic/pic11.jpg","users/user1/workpic/pic12.jpg",
-                   "users/user1/workpic/pic13.jpg","users/user1/workpic/pic14.jpg","users/user1/workpic/pic15.jpg",
-                   "users/user1/workpic/pic16.jpg","users/user1/workpic/pic17.jpg","users/user1/workpic/pic19.jpg",
-                   "users/user1/workpic/pic18.jpg","users/user1/workpic/pic20.jpg","users/user1/workpic/pic07.jpg",           
-]}];
+  workpics: [
+      "users/user1/workpic/pic01.webp",
+      "users/user1/workpic/pic02.webp",
+      "users/user1/workpic/pic04.webp",
+      "users/user1/workpic/pic03.webp",
+      "users/user1/workpic/pic05.webp",
+      "users/user1/workpic/pic06.webp",
+      "users/user1/workpic/pic21.webp",
+      "users/user1/workpic/pic08.webp",
+      "users/user1/workpic/pic09.webp",
+      "users/user1/workpic/pic10.webp",
+      "users/user1/workpic/pic11.webp",
+      "users/user1/workpic/pic12.webp",
+      "users/user1/workpic/pic13.webp",
+      "users/user1/workpic/pic14.webp",
+      "users/user1/workpic/pic15.webp",
+      "users/user1/workpic/pic16.webp",
+      "users/user1/workpic/pic17.webp",
+      "users/user1/workpic/pic19.webp",
+      "users/user1/workpic/pic18.webp",
+      "users/user1/workpic/pic20.webp",
+      "users/user1/workpic/pic07.webp"
+  ]
+}];
 
 const userProducts = [{
 
@@ -43,12 +59,12 @@ const userProducts = [{
 }];  
 
 //////////////page 1 home page//////////////
-const imagesForSlides = ['users/user1/workpic/pic01.jpg', 'users/user1/workpic/pic02.jpg', 'users/user1/workpic/pic05.jpg'];
+const imagesForSlides = ['users/user1/workpic/pic01.webp', 'users/user1/workpic/pic02.webp', 'users/user1/workpic/pic05.webp'];
     
 document.addEventListener('DOMContentLoaded', function () {
     
     const slideImage = document.getElementById('slideImage');
-    const imagesForSlides = ['users/user1/workpic/pic01.jpg', 'users/user1/workpic/pic02.jpg', 'users/user1/workpic/pic05.jpg'];
+    const imagesForSlides = ['users/user1/workpic/pic01.webp', 'users/user1/workpic/pic02.webp', 'users/user1/workpic/pic05.webp'];
     let slideIndex = 0;
     let intervalId; // Declare a variable to store the interval ID
   
