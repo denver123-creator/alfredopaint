@@ -1,4 +1,6 @@
-function showMessagePopup() {
+(function(){
+
+    function showMessagePopup() {
         const wrapper = document.getElementById('wrapper'); 
         const popup = document.createElement('div');
         popup.classList.add('popup');
@@ -13,51 +15,62 @@ function showMessagePopup() {
                         </nav>`;		
         popup.innerHTML = bottomNav;
         wrapper.appendChild(popup);
+        }
+        showMessagePopup();
+
+// Cache DOM elements
+const navTwo = document.querySelector('.popup');
+const mainElement = document.getElementById('main');
+const homeElement = document.getElementById('home');
+const bodyElement = document.body;
+
+// Constants
+const triggerScrollPosition = 120;
+const homeHeight = homeElement.getBoundingClientRect().height;
+
+// Function to update popup visibility
+function updatePopupVisibility() {
+    const distanceFromTop = mainElement.getBoundingClientRect().top;
+    const isAtTop = window.scrollY === triggerScrollPosition;
+  
+    if (window.scrollY === 0) {
+      navTwo.style.display = "none"; // Hide when at the top
+    } else if (distanceFromTop <= isAtTop + homeHeight ) {
+      navTwo.style.display = "block";
+      setTimeout(() => {
+        navTwo.style.opacity = '1';
+      }, 10);
+    } else {
+      navTwo.style.opacity = '0';
+      setTimeout(() => {
+        navTwo.style.display = 'none';
+      }, 1000);
     }
-
-    showMessagePopup()
-
-     window.addEventListener("scroll", function() {
-        const navTwo = document.querySelector('.popup');
-        const mainElement = document.getElementById('main');
-        const homeElement = document.getElementById('home'); 
-        const distanceFromTop = mainElement.getBoundingClientRect().top;
-        const triggerScrollPosition = 120; 
-        const homeHeight = homeElement.getBoundingClientRect().height;
-        const isAtTop = window.scrollY === triggerScrollPosition;
-
-        if (isAtTop || distanceFromTop <= homeHeight - triggerScrollPosition ) {
-            navTwo.style.display = "block";  
-            function showPopup() {
-                setTimeout(() => {
-                  navTwo.style.opacity = '1';
-                }, 10);
-              }  
-              return showPopup();
-        } else {
-            function hidePopup() {
-                navTwo.style.opacity = '0'; 
-                setTimeout(() => {
-                    navTwo.style.display = 'none'; 
-                }, 1000);
-              }
-              return hidePopup()
-        }
-    });
-
-
-
-  window.addEventListener('popstate', function (event) {
-            const navTwo = document.querySelector('.popup');
-            const bodyElement = document.body;
-            const currentURL = window.location.href;
-            const url = "https://denver123-creator.github.io/alfredopaint.io/#";
-            const url2 = "https://denver123-creator.github.io/alfredopaint.io/";
-               if(currentURL === url || currentURL === url2){
-                    navTwo.style.display = "none";
-                    bodyElement.style.overflow = "hidden";
-               }else {
-                    bodyElement.style.overflow = "";
-        }
+  }
+// Scroll event listener with debounce
+let debounceTimer;
+window.addEventListener("scroll", function() {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(updatePopupVisibility, 100);
 });
 
+// Window onload event listener
+window.onload = function() {
+  window.addEventListener('popstate', function(event) {
+    const currentURL = window.location.href;
+    const url = "http://127.0.0.1:5500/website/index.html";
+    const url2 = "http://127.0.0.1:5500/website/index.html#";
+
+    if (currentURL === url || currentURL === url2) {
+      navTwo.style.display = "none";
+      bodyElement.style.overflow = "hidden";
+    } else {
+      bodyElement.style.overflow = "";
+    }
+  });
+};
+
+// Initial call to update popup visibility when the page loads
+updatePopupVisibility();
+    
+}());
