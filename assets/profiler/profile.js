@@ -8,9 +8,11 @@ const user1 = [{
 const userWorks = [{
   workpics: [
       "users/user1/workpic/pic01.webp",
+      "users/user1/workpic/pic22.webp",
       "users/user1/workpic/pic02.webp",
       "users/user1/workpic/pic04.webp",
-      "users/user1/workpic/pic03.webp",
+      "users/user1/workpic/pic07.webp",
+      "users/user1/workpic/pic18.webp",
       "users/user1/workpic/pic05.webp",
       "users/user1/workpic/pic06.webp",
       "users/user1/workpic/pic21.webp",
@@ -25,9 +27,8 @@ const userWorks = [{
       "users/user1/workpic/pic16.webp",
       "users/user1/workpic/pic17.webp",
       "users/user1/workpic/pic19.webp",
-      "users/user1/workpic/pic18.webp",
       "users/user1/workpic/pic20.webp",
-      "users/user1/workpic/pic07.webp"
+      "users/user1/workpic/pic03.webp"
   ]
 }];
 
