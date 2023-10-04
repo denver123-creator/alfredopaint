@@ -2113,6 +2113,10 @@ input, select, textarea {
 					#main > .panel.intro header h1 {
 						line-height: 1.25em;
 						margin-bottom: 0;
+						font-family: 'tangerine', serif;
+						font-size: 90px;;
+						text-shadow: 4px 4px 4px #aaa;
+						font-weight: 600;
 					}
 
 					#main > .panel.intro header p {
