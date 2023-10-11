@@ -22,6 +22,18 @@
 		
 		  gtag('config', 'G-0CQ59BDXFR');
 		</script>
+		
+		<!-- email --->
+		<script
+		type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+	 	 ></script>
+	  	<script type="text/javascript" defer>
+		(function () {
+		emailjs.init("X1NgZwwwvc6SIMXwA");
+		})();
+	  </script>
+		
 	</head>
 	<body class="is-preload">
 
@@ -118,7 +130,12 @@
 												<textarea name="message" placeholder="Message" rows="6"></textarea>
 											</div>
 											<div class="col-12">
-												<a href="https://www.facebook.com/UltraElectroMagnetichacker"><input type="button" value="Send Message" /></a>
+												
+												<div id="buttonContainer">
+													<span id="errMessage"></span>
+													<input type="button" value="Send Message" id="sendeMail" />
+												</div>
+												
 											</div>
 										</div>
 									</div>
@@ -145,6 +162,7 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/profiler/imageaigen.js"></script>
 			<script src="assets/js/lenismoothscroll.js"></script>
+			<script src="assets/js/email.js"></script>
 			<!-- Cloudflare Web Analytics -->
 			<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "63d3292a3d344266a4a4efd25b897407"}'></script>
 			<!-- End Cloudflare Web Analytics -->
