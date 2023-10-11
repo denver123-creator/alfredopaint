@@ -149,7 +149,7 @@ userProducts.forEach((userProduct) => {
           <div class="product-content">
           <p>${userProduct.description}</p>
           <p>$ ${userProduct.price}</p>
-          <button >Buy now</button>
+          <button >Share</button>
         </div>
       </div>`
 });
