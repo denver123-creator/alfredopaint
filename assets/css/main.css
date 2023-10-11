@@ -2671,3 +2671,27 @@ margin-top: 10%;
 #closeImage img{
 	height: 50px;
 }
+
+#buttonContainer {
+    text-align: center;
+}
+
+#errMessage {
+    width: 100%;
+    margin: 0 auto;
+	margin-bottom: 0.5em;
+    display: block;
+    background-color: rgb(192, 31, 31);
+    color: rgb(247, 178, 50);
+    font-family: fantasy, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#messageInput {
+    resize: none;
+}
+
+.error-emphasis {
+    color: red;
+	font-size: large;
+}
+
