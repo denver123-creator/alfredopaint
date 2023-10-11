@@ -58,7 +58,9 @@ function sendMail() {
   
       const serviceID = "service_asbx5cp";
       const templateID = "template_mjgsvsb";
-  
+
+      sendeMail.disabled = true; // to avoid double send
+        
       emailjs.send(serviceID, templateID, params)
         .then(res => {
           //console.log(res);
