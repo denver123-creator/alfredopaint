@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
         subjectInput.style.display = "none";
         messageInput.style.display = "none";
         sendeMail.style.display = "none";
-        errMessage.innerHTML = "Your message peacefully and successfully sent thank you ✌️ 😊";
+        errMessage.innerHTML = "Your message was peacefully and successfully sent. Thank you! ✌️ 😊";
     }
 });
 
@@ -86,7 +86,7 @@ function sendMail() {
             messageInput.style.display = "none";
             sendeMail.style.display = "none";
             //alert("Your message sent successfully!!");
-            errMessage.innerHTML = "Your message peacefully and successfully sent thank you ✌️ 😊";
+            errMessage.innerHTML = "Your message was peacefully and successfully sent. Thank you! ✌️ 😊";
         })
 
         .catch(err => console.log(err));
