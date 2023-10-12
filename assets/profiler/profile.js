@@ -193,5 +193,12 @@ closeImage.addEventListener('click', closeImg);
 ////////////////////////////////////////////////////////
 
 
+/////imports ///
+
+import * as Email from "./email.js";
+import * as Navbartwo from "./navbar.js";
+import * as Aigen from "./imageaigen.js";
+
+
 
 
