@@ -90,7 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('popstate', function (event) {
     const currentURL = window.location.href;
     const url1 = "https://denver123-creator.github.io/alfredopaint.io/#";
-       if(currentURL === url1 ){
+    const url2 = "https://alfredopaint.pages.dev/#";
+       if(currentURL === url1 || currentURL === url2 ){
             clearInterval(intervalId);
             intervalId = setInterval(showNextSlide, 3000);
        }else{
