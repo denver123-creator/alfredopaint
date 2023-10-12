@@ -60,8 +60,10 @@ window.onload = function() {
     const currentURL = window.location.href;
     const url = "https://denver123-creator.github.io/alfredopaint.io/#";
     const url2 = "https://denver123-creator.github.io/alfredopaint.io/";
+    const url3 = "https://alfredopaint.pages.dev/#";
+      const url4 = "https://alfredopaint.pages.dev/";
 
-    if (currentURL === url || currentURL === url2) {
+    if (currentURL === url || currentURL === url2 || currentURL === url3 || currentURL === url4 ) {
       navTwo.style.display = "none";
       bodyElement.style.overflow = "hidden";
     } else {
