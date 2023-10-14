@@ -105,7 +105,7 @@ let homePage = '';
 homePage += `
   <header>
     <h1>${user1[0].name}</h1>
-    <p><strong>${user1[0].profession}</strong></p>
+    <p id="typing-text"><strong>${user1[0].profession}</strong></p>
   </header>
   <a href="#work" class="jumplink pic">
   <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
