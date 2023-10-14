@@ -1,6 +1,6 @@
 const user1 = [{
     name: "Alfredo Publico",
-    profession: "<span style=\"font-style:italic;\">Masterful Brushstrokes - </span>Discover the Artistry of Canvas Creations.",
+    profession: "<span style=\"font-style:italic;\">Masterful Brushstrokes - </span>Discover the Artistry <br> of Canvas Creations.",
     profilepic: "users/user1/profpic/pic01.jpg",
     workpics: []
 }];
