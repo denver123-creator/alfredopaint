@@ -1818,6 +1818,11 @@ input, select, textarea {
 			transition: opacity .25s ease-in-out;
 		}
 
+		#nav img {
+			width: 100%;
+		}
+
+
 	@media screen and (max-width: 423px) {
 
 			#nav a{
