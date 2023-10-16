@@ -6,12 +6,12 @@
         popup.classList.add('popup');
     
         let bottomNav = `<nav id="nav">
-                        <a href="#" class="icon solid fa-home" id="a"><span>Home</span></a>
-                        <a href="#work" class="icon solid fa-folder" id="b"><span>Work</span></a>
-                        <a href="#product" class="icon solid fa-paint-roller"><span>Product</span></a>
-                        <a href="#contact" class="icon solid fa-envelope"  id="c"><span>Contact</span></a>
-                        <a href="#ai" class="icon solid fa-image"><span>AI Image Gen</span></a>
-                        <a href="https://www.facebook.com/alfredo.publico" class="icon brands fa-facebook" id="d"><span>Facebook</span></a>
+                              <a href="#" aria-label="Welcome to my home" class="icon solid "><img src="assets/css/images/home.webp" alt="homepage"><span>Home</span></a>
+                              <a href="#work" aria-label="View my works" class="icon solid "><img src="assets/css/images/paint-roller.webp" alt="workpage"><span>Work</span></a>
+                              <a href="#product" aria-label="Buy my latest paintings" class="icon solid"><img src="assets/css/images/art-and-design.webp" alt="productpage"><span>Product</span></a>
+                              <a href="#ai" aria-label="Want some ai image" class="icon solid"><img src="assets/css/images/paint-palette.webp" alt="ai"><span>AI Image Gen</span></a>
+                              <a href="#contact" class="icon solid"><img src="assets/css/images/email.webp" alt="contact"><span>Contact</span></a>
+                              <a href="https://www.facebook.com/alfredo.publico" aria-label="Chat me at my facebook" class="icon"><img src="assets/css/images/facebook.webp" alt="facebook"><span>Facebook</span></a>
                         </nav>`;		
         popup.innerHTML = bottomNav;
         wrapper.appendChild(popup);
