@@ -2268,9 +2268,8 @@ input, select, textarea {
 }
 
 #work p {
-	text-align: center;
+	text-align:justify;
 	color: black;
-	
 }
 
 #contact p {
@@ -2317,8 +2316,9 @@ input, select, textarea {
     justify-content: center;
   }
 
-  #ai P{
+  #ai p{
 	text-align:justify;
+	color: #000;
   }
 
 
@@ -2475,7 +2475,7 @@ input, select, textarea {
 #product p{
 	color: rgb(24, 22, 22);
 	margin: 1em;
-	text-align: center;
+	text-align: justify;
 }
 
 
