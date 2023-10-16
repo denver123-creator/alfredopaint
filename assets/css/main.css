@@ -2517,13 +2517,6 @@ input, select, textarea {
 	}
   } 
 
-  #product-box p{
-	color: rgb(24, 22, 22);
-	text-align: justify;
-	margin: 1rem 0;
-	margin-top: 0.3em;
-  }
-
 #product button{
 	background: rgba(255, 255, 255, 0.2);
 	border-radius: 16px;
