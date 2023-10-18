@@ -33,12 +33,12 @@ const userWorks = [{
 }];
 
 const userProducts = [{
-
         title: "Guns and Roses",
         description: `A captivating painting of two vibrant,fully blossomed roses, 
         radiating timeless beauty and romance with meticulous attention 
         to detail and expert rendering.`,
         image: "users/user1/product-image/1.webp",
+        video: "users/user1/product-video/video1.mp4",
         price: 99.99
      },{
         title: "House of the Rising Sun",
@@ -47,6 +47,7 @@ const userProducts = [{
         And it's been the ruin of many a poor boy
         And God I know I'm one.`,
         image: "users/user1/product-image/2.webp",
+        video: "users/user1/product-video/video2.webm",
         price: 999.99
     }, {
         title: "Hotel California",
@@ -56,8 +57,9 @@ const userProducts = [{
         Any time of year
         You can find it here.`,
         image: "users/user1/product-image/3.webp",
-        price: 9999.99  
-}];  
+        video: "users/user1/product-video/video3.webm",
+        price: 9999.99
+}];
 
 //////////////page 1 home page//////////////
 const imagesForSlides = ['users/user1/workpic/pic01.webp', 'users/user1/workpic/pic02.webp', 'users/user1/workpic/pic05.webp'];
@@ -104,8 +106,8 @@ let homePage = '';
 
 homePage += `
   <header>
-    <h1>${user1[0].name}</h1>
-    <p id="typing-text"><strong>${user1[0].profession}</strong></p>
+      <h1 >${user1[0].name}</h1>
+        <p id="typing-text"><strong>${user1[0].profession}</strong></p>
   </header>
   <a href="#work" class="jumplink pic">
   <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
@@ -141,18 +143,17 @@ userWorks.forEach((userWork) => {
 
 let productPage = "";
 
-userProducts.forEach((userProduct) => {
-
+userProducts.forEach((userProduct, index) => {
   productPage += `
-    <div id="product-box">
-    <img src="${userProduct.image}" alt="Product Image">
-        <h2>"${userProduct.title}"</h2>
+      <div id="product-box">
+          <img src="${userProduct.image}" alt="Product Image">
+          <h2>${userProduct.title}</h2>
           <div class="product-content">
-          <p>${userProduct.description}</p>
-          <p>$ ${userProduct.price}</p>
-          <button >Share</button>
-        </div>
-      </div>`
+              <p>${userProduct.description}</p>
+              <p>$ ${userProduct.price}</p>
+              <button class="play-button" data-video-index="${index}">Play</button>
+          </div>
+      </div>`;
 });
 
 ////////////////////////////////////////////
@@ -181,8 +182,13 @@ function openImg(event) {
 
 function closeImg() {
   fullImgBox.style.display = 'none';
-
 }
+
+fullImgBox.addEventListener("click", function (event) {
+  if (event.target === this) {
+       closeImg();
+  }
+});
 
 thumbnailImages.forEach((img) => {
   img.addEventListener('click', openImg);
@@ -190,10 +196,47 @@ thumbnailImages.forEach((img) => {
 });
 
 closeImage.addEventListener('click', closeImg);
-////////////////////////////////////////////////////////
 
 
-/////imports ///
+////////////////////product modal video/////////////////////////////
+
+
+const videoModal = document.getElementById("video-modal");
+const modalVideo = document.getElementById("modal-video");
+const closeButton = document.getElementById("close-button");
+
+// Add event listeners to the "Play" buttons
+const playButtons = document.querySelectorAll(".play-button");
+playButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+        const videoIndex = this.getAttribute("data-video-index");
+        const videoUrl = userProducts[videoIndex].video;
+        openVideoModal(videoUrl);
+    });
+});
+
+// Function to open the video modal and play the video
+function openVideoModal(videoUrl) {
+    modalVideo.src = videoUrl;
+    videoModal.style.display = "flex"; // Display the modal
+}
+
+// Event listener for the close button
+function closeVideoModal() {
+  modalVideo.pause();
+  modalVideo.src = ""; // Clear the video source
+  videoModal.style.display = "none"; // Hide the modal
+}
+
+videoModal.addEventListener("click", function (event) {
+  if (event.target === this) {
+      closeVideoModal();
+  }
+});
+
+closeButton.addEventListener("click", closeVideoModal);
+
+/////imports ///////////////////////////////////////////////////////////
 
 import * as Email from "./email.js";
 import * as Navbartwo from "./navbar.js";
