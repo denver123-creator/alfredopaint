@@ -2575,7 +2575,7 @@ input, select, textarea {
 	padding: 10px 20px;
 	border-radius: 5px;
 	font-size: 14px;
-	z-index: 9999;
+	z-index: 1;
 	width: auto;
 	display: none;
 	padding-top: 1.8rem;
