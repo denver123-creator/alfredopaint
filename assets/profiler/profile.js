@@ -98,6 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
             intervalId = setInterval(showNextSlide, 3000);
        }else{
              clearInterval(intervalId);
+             closeVideoModal();
+             closeImg();
        }
     });  
   });
