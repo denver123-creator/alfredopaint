@@ -243,6 +243,7 @@ closeButton.addEventListener("click", closeVideoModal);
 import * as Email from "./email.js";
 import * as Navbartwo from "./navbar.js";
 import * as Aigen from "./imageaigen.js";
+import * as Zoom from "./zoomhandler.js";
 
 
 
