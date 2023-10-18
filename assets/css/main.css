@@ -2763,7 +2763,7 @@ header {
 
 .close-button {
 	position: absolute;
-	top: 1rem;
+	top: -1rem;
 	right: 2rem;
 	font-size: 3rem;
 	cursor: pointer;
@@ -2771,6 +2771,6 @@ header {
 }
 
 .video-modal-content video {
-	max-width: 75%; /* Make the video responsive */
+	max-width: 90%; /* Make the video responsive */
 	height: auto; /* Maintain the aspect ratio */
 }
