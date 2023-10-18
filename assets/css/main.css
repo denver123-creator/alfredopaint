@@ -2479,43 +2479,23 @@ input, select, textarea {
 	font-size: 1.2em;
 }
 
-
 #product-box {
 	position: relative;
-	max-width: 100%;
 	overflow: hidden;
-	border: 2px solid transparent; /* Start with a transparent border */
+	border: 2px solid transparent;
 	border-radius: 10px;
 	padding: 20px;
 	background-color: rgb(164, 184, 187);
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	max-width: 700px;
+	max-width: 644px;
 	margin: 0;
 	box-sizing: border-box;
 	margin: 0rem 0 2rem 0;
 	box-shadow: 20px 20px 10px grey;
-	animation: borderColorAnimation 3s linear infinite; /* Apply border color animation */
   }
-  
-  @keyframes borderColorAnimation {
-	0% {
-	  border-color: red; /* Change border color at each keyframe */
-	}
-	25% {
-	  border-color: yellow;
-	}
-	50% {
-	  border-color: green;
-	}
-	75% {
-	  border-color: blue;
-	}
-	100% {
-	  border-color: red;
-	}
-  } 
+
 
 #product button{
 	background: rgba(255, 255, 255, 0.2);
@@ -2531,13 +2511,12 @@ input, select, textarea {
 }
 
   #product-box img{
-	max-width: 100%;
-	height: auto;
-	transition: transform 0.5s ease, box-shadow 0.3s ease;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	padding: 5px;
-
+    width: 100%; 
+    height: auto;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
   }
 
   #product-box h2{
