@@ -2526,6 +2526,10 @@ input, select, textarea {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+#product button:hover{
+	background-color: #2980b9;
+}
+
   #product-box img{
 	max-width: 100%;
 	height: auto;
