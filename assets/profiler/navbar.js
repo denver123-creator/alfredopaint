@@ -55,22 +55,29 @@ window.addEventListener("scroll", function() {
 });
 
 // Window onload event listener
-window.onload = function() {
-  window.addEventListener('popstate', function(event) {
-    const currentURL = window.location.href;
-    const url = "https://denver123-creator.github.io/alfredopaint.io/#";
-    const url2 = "https://denver123-creator.github.io/alfredopaint.io/";
-    const url3 = "https://alfredopaint.pages.dev/#";
-      const url4 = "https://alfredopaint.pages.dev/";
+const allowedURLs = [
+  "https://denver123-creator.github.io/alfredopaint.io/#",
+  "https://denver123-creator.github.io/alfredopaint.io/",
+  "https://alfredopaint.pages.dev/#",
+  "https://alfredopaint.pages.dev/"
+];
 
-    if (currentURL === url || currentURL === url2 || currentURL === url3 || currentURL === url4 ) {
-      navTwo.style.display = "none";
-      bodyElement.style.overflow = "hidden";
-    } else {
-      bodyElement.style.overflow = "";
-    }
-  });
-};
+// Function to handle the popstate event
+function handlePopstate() {
+  const currentURL = window.location.href;
+  
+  if (allowedURLs.includes(currentURL)) {
+    navTwo.style.display = "none";
+    bodyElement.style.overflow = "hidden";
+  } else {
+    bodyElement.style.overflow = "";
+
+  }
+}
+// Wait for the DOM to be fully loaded before adding the event listener
+  document.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('popstate', handlePopstate);
+});
 
 // Initial call to update popup visibility when the page loads
 updatePopupVisibility();
