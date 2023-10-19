@@ -2743,3 +2743,8 @@ header {
 	max-width: 90%; /* Make the video responsive */
 	height: auto; /* Maintain the aspect ratio */
 }
+
+#work p img {
+	vertical-align: text-bottom;
+	display: inline-block; 
+  }
