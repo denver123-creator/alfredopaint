@@ -39,7 +39,7 @@ const userProducts = [{
         to detail and expert rendering.`,
         image: "users/user1/product-image/1.webp",
         video: "users/user1/product-video/video1.mp4",
-        price: 99.99
+        price: 999.99
      },{
         title: "House of the Rising Sun",
         description: `There is a house way down in New Orleans
@@ -58,7 +58,7 @@ const userProducts = [{
         You can find it here.`,
         image: "users/user1/product-image/3.webp",
         video: "users/user1/product-video/video3.webm",
-        price: 9999.99
+        price: 999.99
 }];
 
 //////////////page 1 home page//////////////
