@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
     intervalId = setInterval(showNextSlide, 5000);
 
     window.addEventListener('popstate', function (event) {
-      const currentURL = window.location.href.split('?')[0];
+      const currentURL = window.location.href.split('#')[0].split('?')[0]; // Remove query parameters and hash
       const allowedURLs2 = [
           "https://denver123-creator.github.io/alfredopaint/#",
           "https://alfredopaint.pages.dev/#"
