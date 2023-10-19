@@ -62,50 +62,67 @@ const userProducts = [{
 }];
 
 //////////////page 1 home page//////////////
-const imagesForSlides = ['users/user1/workpic/pic01.webp', 'users/user1/workpic/pic02.webp', 'users/user1/workpic/pic05.webp'];
-    
-document.addEventListener('DOMContentLoaded', function () {
-    
-    const slideImage = document.getElementById('slideImage');
-    const imagesForSlides = ['users/user1/workpic/pic01.webp', 'users/user1/workpic/pic02.webp', 'users/user1/workpic/pic05.webp'];
-    let slideIndex = 0;
-    let intervalId; // Declare a variable to store the interval ID
-  
-    function updateSlideImage() {
-      setTimeout(function () {
-        slideImage.src = imagesForSlides[slideIndex];
-        slideImage.classList.remove('fade');
-      }, 1000);
-    }
-  
-    function showNextSlide() {
-      slideIndex = (slideIndex + 1) % imagesForSlides.length;
-      slideImage.classList.add('fade');
-      updateSlideImage();
-    }
-  
-    updateSlideImage();
-  
-    // Start the slideshow and store the interval ID
-    intervalId = setInterval(showNextSlide, 5000);
 
-    window.addEventListener('popstate', function (event) {
-      const currentURL = window.location.href.split('?')[0];
-      const allowedURLs2 = [
-          "https://denver123-creator.github.io/alfredopaint/#",
-          "https://alfredopaint.pages.dev/#"
-      ];
+const imagesForSlides = ['users/user1/workpic/pic01.webp', 'users/user1/workpic/pic02.webp', 'users/user1/workpic/pic05.webp'];
+const homepage = document.getElementById('home');
+
+function slidesShow() {
   
-      if (allowedURLs2.includes(currentURL)) {
-          clearInterval(intervalId);
-          intervalId = setInterval(showNextSlide, 3000);
-      } else {
-          clearInterval(intervalId);
-          closeVideoModal();
-          closeImg();
-      }
-  });  
+  const slideImage = document.getElementById('slideImage');
+  let slideIndex = 0;
+  let intervalId; // Declare a variable to store the interval ID
+
+  function updateSlideImage() {
+    slideImage.src = imagesForSlides[slideIndex];
+    slideImage.classList.remove('fade');
+  }
+
+  function showNextSlide() {
+    slideIndex = (slideIndex + 1) % imagesForSlides.length;
+    slideImage.classList.add('fade');
+    updateSlideImage();
+  }
+
+  updateSlideImage();
+
+  intervalId = setInterval(showNextSlide, 3000);
+
+  return intervalId; // Return intervalId to make it accessible outside the function
+}
+
+let intervalId; // Declare intervalId here so it's accessible in handleVisibility
+
+// Function to be executed when the element becomes visible
+const handleVisibility = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log("The 'home' article is fully visible.");
+      clearInterval(intervalId); // Clear any existing interval
+      intervalId = slidesShow(); // Start the slideshow and store the interval ID
+    } else {
+      console.log("The 'home' article is not visible.");
+      clearInterval(intervalId);
+      closeVideoModal();
+      closeImg();
+    }
   });
+};
+
+// Create an Intersection Observer
+const observer = new IntersectionObserver(handleVisibility);
+
+// Start observing the "home" article
+observer.observe(homepage);
+
+
+window.addEventListener('popstate', function (event) {
+  if (!observer.observe(homepage)) {
+      closeVideoModal();
+      closeImg();
+  }
+});  
+
+/////////////////////////
 
 let homePage = '';
 
@@ -151,7 +168,10 @@ let productPage = "";
 userProducts.forEach((userProduct, index) => {
   productPage += `
       <div id="product-box">
+      
           <img src="${userProduct.image}" alt="Product Image" width="644" height="859">
+
+
           <h2>${userProduct.title}</h2>
           <div class="product-content">
               <p>${userProduct.description}</p>
@@ -160,6 +180,7 @@ userProducts.forEach((userProduct, index) => {
           </div>
       </div>`;
 });
+
 
 ////////////////////////////////////////////
 
@@ -247,7 +268,3 @@ import * as Email from "./email.js";
 import * as Navbartwo from "./navbar.js";
 import * as Aigen from "./imageaigen.js";
 import * as Zoom from "./zoomhandler.js";
-
-
-
-
