@@ -120,6 +120,7 @@ let homePage = '';
 homePage += `
   <header>
       <h1 >${user1[0].name}</h1>
+      <img src="assets/css/images/philippines.png" alt="philippine flag">
         <p id="typing-text"><strong>${user1[0].profession}</strong></p>
   </header>
   <a href="#work" class="jumplink pic">
