@@ -1,20 +1,20 @@
-// BARYABOL//
-const errMessage = document.getElementById('errMessage');
-const emailInput = document.getElementById('emailInput');
-const subjectInput = document.getElementById('subjectInput');
-const nameInput = document.getElementById('nameInput');
-const messageInput = document.getElementById('messageInput');
-const sendeMail = document.getElementById('sendeMail');
+// BARYABOL
+const getElement = (id) => document.getElementById(id);
 
+const errMessage = getElement('errMessage');
+const emailInput = getElement('emailInput');
+const subjectInput = getElement('subjectInput');
+const nameInput = getElement('nameInput');
+const messageInput = getElement('messageInput');
+const sendeMail = getElement('sendeMail');
 
 window.addEventListener('load', function() {
-    if (localStorage.getItem("emailSent") === "true") {
+    const emailSent = localStorage.getItem("emailSent") === "true";
+    if (emailSent) {
         // Hide form elements
-        nameInput.style.display = "none";
-        emailInput.style.display = "none";
-        subjectInput.style.display = "none";
-        messageInput.style.display = "none";
-        sendeMail.style.display = "none";
+        [nameInput, emailInput, subjectInput, messageInput, sendeMail].forEach(element => {
+            element.style.display = "none";
+        });
         errMessage.innerHTML = "Your message was peacefully and successfully sent. Thank you! ✌️ 😊";
     }
 });
@@ -62,32 +62,24 @@ function sendMail() {
       sendeMail.disabled = true; // to avoid double send
         
       emailjs.send(serviceID, templateID, params)
-        .then(res => {
-          //console.log(res);
-          if (localStorage.getItem("emailSent") !== "true") {
-            // Enable form inputs
-            nameInput.disabled = false;
-            emailInput.disabled = false;
-            subjectInput.disabled = false;
-            messageInput.disabled = false;
-            sendeMail.disabled = false;
-            // Clear form inputs
-            nameInput.value = "";
-            emailInput.value = "";
-            subjectInput.value = "";
-            messageInput.value = "";
+      .then(res => {
+        if (localStorage.getItem("emailSent") !== "true") {
+          // Enable form inputs
+          [nameInput, emailInput, subjectInput, messageInput, sendeMail].forEach(input => {
+            input.disabled = false;
+            input.value = "";
+          });
+    
+          localStorage.setItem("emailSent", "true");
+    
+          // Hide form elements
+          [nameInput, emailInput, subjectInput, messageInput, sendeMail].forEach(element => {
+            element.style.display = "none";
+          });
+    
+          errMessage.innerHTML = "Your message was peacefully and successfully sent. Thank you! ✌️ 😊";
         }
-
-            localStorage.setItem("emailSent", "true");
-            // Hide form elements
-            nameInput.style.display = "none";
-            emailInput.style.display = "none";
-            subjectInput.style.display = "none";
-            messageInput.style.display = "none";
-            sendeMail.style.display = "none";
-            //alert("Your message sent successfully!!");
-            errMessage.innerHTML = "Your message was peacefully and successfully sent. Thank you! ✌️ 😊";
-        })
+      })
 
         .catch(err => console.log(err));
   }
