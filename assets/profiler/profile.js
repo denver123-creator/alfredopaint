@@ -70,7 +70,7 @@ function slidesShow() {
   
   const slideImage = document.getElementById('slideImage');
   let slideIndex = 0;
-  let intervalId; // Declare a variable to store the interval ID
+  let intervalId; 
 
   function updateSlideImage() {
     slideImage.src = imagesForSlides[slideIndex];
@@ -84,36 +84,27 @@ function slidesShow() {
   }
 
   updateSlideImage();
-
   intervalId = setInterval(showNextSlide, 3000);
-
-  return intervalId; // Return intervalId to make it accessible outside the function
+  return intervalId; 
 }
 
-let intervalId; // Declare intervalId here so it's accessible in handleVisibility
+let intervalId; 
 
-// Function to be executed when the element becomes visible
+
 const handleVisibility = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log("The 'home' article is fully visible.");
-      clearInterval(intervalId); // Clear any existing interval
-      intervalId = slidesShow(); // Start the slideshow and store the interval ID
+      clearInterval(intervalId); 
+      intervalId = slidesShow(); 
     } else {
-      console.log("The 'home' article is not visible.");
       clearInterval(intervalId);
       closeVideoModal();
       closeImg();
     }
   });
 };
-
-// Create an Intersection Observer
 const observer = new IntersectionObserver(handleVisibility);
-
-// Start observing the "home" article
 observer.observe(homepage);
-
 
 window.addEventListener('popstate', function (event) {
   if (!observer.observe(homepage)) {
@@ -181,13 +172,11 @@ userProducts.forEach((userProduct, index) => {
       </div>`;
 });
 
-
 ////////////////////////////////////////////
 
 document.querySelector('.intro').innerHTML = homePage;   
 document.getElementById('works').innerHTML = workPage; 
 document.querySelector('.products').innerHTML = productPage;
-
 
 /////////////// Work page page 2 imgage zoomer  //////////////
 const fullImgBox = document.getElementById('fullImgBox');
@@ -203,7 +192,6 @@ function openImg(event) {
 
   fullImg.src = imageUrl;
   fullImgBox.style.display = 'flex';
-
 }
 
 function closeImg() {
@@ -223,9 +211,7 @@ thumbnailImages.forEach((img) => {
 
 closeImage.addEventListener('click', closeImg);
 
-
 ////////////////////product modal video/////////////////////////////
-
 
 const videoModal = document.getElementById("video-modal");
 const modalVideo = document.getElementById("modal-video");
@@ -241,17 +227,15 @@ playButtons.forEach((button) => {
     });
 });
 
-// Function to open the video modal and play the video
 function openVideoModal(videoUrl) {
     modalVideo.src = videoUrl;
-    videoModal.style.display = "flex"; // Display the modal
+    videoModal.style.display = "flex"; 
 }
 
-// Event listener for the close button
 function closeVideoModal() {
   modalVideo.pause();
-  modalVideo.src = ""; // Clear the video source
-  videoModal.style.display = "none"; // Hide the modal
+  modalVideo.src = ""; 
+  videoModal.style.display = "none"; 
 }
 
 videoModal.addEventListener("click", function (event) {
