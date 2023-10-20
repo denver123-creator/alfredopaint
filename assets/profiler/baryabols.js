@@ -52,7 +52,7 @@ const userProducts = [{
             video: "users/user1/product-video/video3.webm",
             price: 999.99
         }, {
-            title: "Bed of Roses",
+            title: "Bed of Roses (2019)",
             description: `I want to lay you down in a bed of roses
             For tonight I'll sleep on a bed of nails
             Oh I want to be just as close as the Holy Ghost is
@@ -61,7 +61,7 @@ const userProducts = [{
             video: "users/user1/product-video/video1.mp4",
             price: 999.99
         }, {
-            title: "House of the Rising Sun",
+            title: "House of the Rising Sun (2019)",
             description: `There is a house way down in New Orleans
             They call the Rising Sun
             And it's been the ruin of many a poor boy
@@ -70,7 +70,7 @@ const userProducts = [{
             video: "users/user1/product-video/video2.webm",
             price: 999.99
         }, {
-            title: "Hotel California",
+            title: "Hotel California (2020)",
             description: `Welcome to the Hotel California
             Such a lovely place 
             Plenty of room at the Hotel California
