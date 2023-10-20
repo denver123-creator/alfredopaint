@@ -1,5 +1,4 @@
 //////////////page 1 home page//////////////
-
 const imagesForSlides = ['users/user1/workpic/pic01.webp', 'users/user1/workpic/pic02.webp', 'users/user1/workpic/pic05.webp'];
 const homepage = document.getElementById('home');
 
@@ -26,7 +25,6 @@ function slidesShow() {
 }
 
 let intervalId; 
-
 
 const handleVisibility = (entries) => {
   entries.forEach((entry) => {
