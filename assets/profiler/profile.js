@@ -95,10 +95,13 @@ let productPage = "";
 userProducts.forEach((userProduct, index) => {
   productPage += `
       <div id="product-box">
-      
-          <img src="${userProduct.image}" alt="Product Image" width="644" height="859">
-
-
+          <div class="popular-block">
+                <div class="inner-box">
+                  <div class="image-box">  
+                      <img src="${userProduct.image}" alt="Product Image" width="644" height="859">
+                   </div>
+                </div>
+            </div>
           <h2>${userProduct.title}</h2>
           <div class="product-content">
               <p>${userProduct.description}</p>
