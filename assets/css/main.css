@@ -2748,3 +2748,82 @@ header {
 	vertical-align: text-bottom;
 	display: inline-block; 
   }
+
+
+/* -------------------shine --------------------------*/
+
+.popular-block .image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.popular-block .image-box .image img {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.popular-block .inner-box:hover .image img {
+  transform: scale(1.08, 1.08);
+}
+
+
+.popular-block .inner-box:hover .image-box::before {
+  -webkit-animation: shine 1s;
+  animation: shine 1s;
+}
+
+.popular-block .image-box:before {
+  position: absolute;
+  top: 0;
+  left: -85%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .8) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .8)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .8) 100%);
+  -webkit-transform: skewX(-25deg);
+  -ms-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+  z-index: 1;
+}
+
+.popular-block .hvr-box:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 78%;
+  opacity: 0.55;
+  background: rgba(0, 0, 0, 0.30);
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.0));
+  background: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.0));
+  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.0));
+  border-radius: 8px;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+/* -------------------shine --------------------------*/
