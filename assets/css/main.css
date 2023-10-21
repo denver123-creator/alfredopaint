@@ -2757,14 +2757,6 @@ header {
   overflow: hidden;
 }
 
-
-.popular-block .image-box .image img {
-  position: relative;
-  width: 100%;
-  border-radius: 8px;
-  transition: all 0.5s ease;
-}
-
 .popular-block .inner-box:hover .image-box::before {
   -webkit-animation: shine 1s;
   animation: shine 1s;
