@@ -2513,9 +2513,6 @@ input, select, textarea {
   #product-box img{
     width: 100%; 
     height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
   }
 
   #product-box h2{
@@ -2749,16 +2746,22 @@ header {
 }
 
 /* -------------------shine --------------------------*/
+.image-box img{
+	position: relative;
+	padding-top: 0.5em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
 
 .popular-block .image-box {
-  position: relative;
-  overflow: hidden;
-}
-
-.popular-block .inner-box:hover .image-box::before {
-  -webkit-animation: shine 1s;
-  animation: shine 1s;
-}
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	border: 1px solid white;
+	padding: 0;
+	margin:0;
+  }
 
 .popular-block .image-box:before {
   position: absolute;
