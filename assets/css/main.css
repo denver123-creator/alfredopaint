@@ -2472,6 +2472,16 @@ input, select, textarea {
 	align-items: center;
 }
 
+#product p{
+	line-height: normal;
+}
+.panel p:nth-child(2) {
+	color: #000;
+	margin: 0.5em;
+	text-align:justify;
+	font-size: 1.2em;
+}
+
 .product-box {
 	position: relative;
 	overflow: hidden;
