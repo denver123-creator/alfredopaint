@@ -2479,7 +2479,7 @@ input, select, textarea {
 	font-size: 1.2em;
 }
 
-#product-box {
+.product-box {
 	position: relative;
 	overflow: hidden;
 	border: 2px solid transparent;
@@ -2510,12 +2510,12 @@ input, select, textarea {
 	background-color: #2980b9;
 }
 
-  #product-box img{
+  .product-box img{
     width: 100%; 
     height: auto;
   }
 
-  #product-box h2{
+  .product-box h2{
   font-size: 24px; 
   color: #333;
   text-align: center;
