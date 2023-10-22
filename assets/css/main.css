@@ -2763,6 +2763,11 @@ header {
 	margin:0;
   }
 
+.popular-block .inner-box:hover .image-box::before {
+  -webkit-animation: shine 1s;
+  animation: shine 1s;
+}
+
 .popular-block .image-box:before {
   position: absolute;
   top: 0;
