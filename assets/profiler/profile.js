@@ -94,7 +94,7 @@ let productPage = "";
 
 userProducts.forEach((userProduct, index) => {
   productPage += `
-      <div id="product-box popular-block">
+      <div class="product-box popular-block">
 
                 <div class="inner-box">
                   <div class="image-box">  
