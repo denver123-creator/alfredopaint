@@ -2748,9 +2748,8 @@ header {
 /* -------------------shine --------------------------*/
 .image-box img{
 	position: relative;
-	padding-top: 0.5em;
-	padding-left: 0.5em;
-	padding-right: 0.5em;
+	display: block;
+	padding: 0.5em;
 }
 
 .popular-block .image-box {
