@@ -1,17 +1,43 @@
 <!DOCTYPE HTML>
-<!--
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html lang="en">
 	<head>
-		<title>Alfredo's Finest Creations</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Explore the world of painting as a hobby with tips, techniques, and inspiration from Alfredo's Finest Creations.">
+		<meta name="keywords" content="painting hobby, art, painting techniques, creative expression, painting inspiration">
+		<meta name="author" content="Alfredo's Finest Creations">
+		<meta name="robots" content="index, follow">
+		<meta name="og:title" content="Alfredo's Finest Creations - Painting Hobby">
+		<meta name="og:description" content="Explore the world of painting as a hobby with tips, techniques, and inspiration from Alfredo's Finest Creations.">
+		<meta name="og:image" content="assets/css/images/bg4.jpg">
+		<meta name="og:url" content="https://alfredopaint.pages.dev/">
+		<title>Alfredo's Painting Creations - Painting Collections</title>
+		<link rel="icon" href="assets/css/images/painticon.png" type="image/x-icon">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 		<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0CQ59BDXFR"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'G-0CQ59BDXFR');
+		</script>
+		
+		<!-- email --->
+		<script
+		type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+	 	 ></script>
+	  	<script type="text/javascript" defer>
+		(function () {
+		emailjs.init("X1NgZwwwvc6SIMXwA");
+		})();
+	  </script>
+		
 	</head>
 	<body class="is-preload">
 
@@ -20,12 +46,12 @@
 
 				<!-- Nav -->
 					<nav id="nav">
-						<a href="#" aria-label="Welcome to my home" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#work" aria-label="View my works" class="icon solid fa-folder"><span>Work</span></a>
-						<a href="#product" aria-label="Buy my latest paintings" class="icon solid fa-paint-roller"><span>Product</span></a>
-						<a href="#ai" aria-label="Want some ai image" class="icon solid fa-image"><span>AI Image Gen</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-						<a href="https://www.facebook.com/alfredo.publico" aria-label="Chat me at my facebook" class="icon brands fa-facebook"><span>Facebook</span></a>
+						<a href="#" aria-label="Welcome to my home" class="icon solid "><img src="assets/css/images/home.webp"><span>Home</span></a>
+						<a href="#work" aria-label="View my works" class="icon solid "><img src="assets/css/images/paint-roller.webp"><span>Work</span></a>
+						<a href="#product" aria-label="Buy my latest paintings" class="icon solid"><img src="assets/css/images/art-and-design.webp"><span>Product</span></a>
+						<a href="#ai" aria-label="Want some ai image" class="icon solid"><img src="assets/css/images/paint-palette.webp"><span>AI Image Gen</span></a>
+						<a href="#contact" class="icon solid"><img src="assets/css/images/email.webp" alt="contact"><span>Contact</span></a>
+						<a href="https://www.facebook.com/alfredo.publico" aria-label="Chat me at my facebook" class="icon"><img src="assets/css/images/facebook.webp"><span>Facebook</span></a>
 					</nav>
 				<!-- Main -->
 					<div id="main">
@@ -36,11 +62,11 @@
 						<!-- Work -->
 							<article id="work" class="panel">
                     					<h2>Provincial Canvas</h2>
-							<p>"Embrace rustic charm and tranquil beauty with 'Provincial Serenity.' This artwork captures the essence of the countryside, inviting you to savor the timeless allure of rural life."</p>
+							<p>"Embrace rustic charm and tranquil beauty with 'Provincial Serenity.' This artwork captures the essence of the countryside, inviting you to savor the timeless allure of rural life."<img src="assets/css/images/philippines.png" alt="philippine flag"></p>
 							
-								<div class="full-img" id="fullImgBox">
+								<div class="full-img" id="fullImgBox" title="fullworkImage" alt="full-images">
 									<img src="" id="fullImg">
-									<span id="closeImage" title="Close"><img src="assets/css/images/x3.webp" alt=""></span>
+									<span id="closeImage" title="Close">&times;</span>
 								</div>								
 							<div id="works">
 								<!-- Work Contents -->
@@ -69,46 +95,56 @@
 
 									<div class="response-here"></div>
 									<div class="error-here">
+									<div class="titleParagraph"></div>
 										
 									</div>
 								</div>
 							</article>
 							<!-- ai -->
-
 									<!-- product -->
 									<article id="product" class="panel">
 										<h2>Secret Paintings</h2>
 										<p>Hidden deep beneath the mansion's labyrinthine corridors lies a super rare secret collection of paintings, 
 											a treasure guarded with utmost secrecy for generations.</p>
-											
 											  <div class="products">
 												  <!-- product Contents -->
 											 </div>
+										
+											 <div class="video-modal" id="video-modal" style="display: none;">
+												<div class="video-modal-content">
+													<span class="close-button" id="close-button">&times;</span>
+													<video id="modal-video" controls autoplay="false"></video>
+												</div>
+											</div>
+										
 										</article>
 										<!-- product -->					
 							<!-- Contact -->
 							<article id="contact" class="panel">
 								<header>
-									<h2>Contact Me </h2>
-									<p>Currently working on this page and it will be available soon. Thank you for your patience.</p>
+									<h2>Leave any short message thanks</h2>
 								</header>
 								<form action="#" method="post">
 									<div>
 										<div class="row">
 											<div class="col-6 col-12-medium">
-												<input type="text" name="name" placeholder="Name" />
+												<input type="text" name="name" placeholder="Name" id="nameInput" maxlength="25"/>
 											</div>
 											<div class="col-6 col-12-medium">
-												<input type="text" name="email" placeholder="Email" />
+												<input type="email" name="email" placeholder="Email" id="emailInput" maxlength="50"/>
 											</div>
 											<div class="col-12">
-												<input type="text" name="subject" placeholder="Subject" />
+												<input type="text" name="subject" placeholder="Subject" id="subjectInput" maxlength="70"/>
 											</div>
 											<div class="col-12">
-												<textarea name="message" placeholder="Message" rows="6"></textarea>
+												<textarea name="message" placeholder="Message" rows="6" id="messageInput" maxlength="500"></textarea>
 											</div>
 											<div class="col-12">
-												<a href="https://www.facebook.com/alfredo.publico"><input type="button" value="Send Message" /></a>
+												<div id="buttonContainer">
+													<span id="errMessage"></span>
+													<input type="button" value="Send Message" id="sendeMail" />
+												</div>
+												
 											</div>
 										</div>
 									</div>
@@ -119,26 +155,25 @@
 				<!-- Footer -->
 					<div id="footer">
 						<ul class="copyright">
-							<li>&copy; VerDen 2023.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy;<a href="https://www.facebook.com/UltraElectroMagnetichacker">2023 Coded by Denver </a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</div>
 
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/profiler/profile.js"></script>
-			<script src="assets/js/navbar.js"></script>
+			<script src="assets/profiler/profile.js" type="module"></script>
+			<script src="assets/profiler/baryabols.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/profiler/imageaigen.js"></script>
 			<script src="assets/js/lenismoothscroll.js"></script>
-
-			<script>
-				
-			</script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/util.js"></script>
+		<!-- Scripts -->
+			<!-- Cloudflare Web Analytics -->
+			<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "63d3292a3d344266a4a4efd25b897407"}'></script>
+			<!-- End Cloudflare Web Analytics -->
 
 	</body>
 </html>

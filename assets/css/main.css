@@ -1305,13 +1305,25 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
-		background-image: url("images/overlay.webp"), url("images/7.webp");
-		background-repeat: repeat, no-repeat;
-		background-size: auto, 100% 100%;
+		body {
+		position: relative; /* Make sure the body is positioned relatively */
+		background-image: url("images/new.webp");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
 		background-attachment: fixed;
 		overflow-y: scroll;
-	}
+	  }
+	  
+	  body::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -1;
+	  }
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -1796,7 +1808,7 @@ input, select, textarea {
 			width: 1em;
 			height: 1em;
 			line-height: 0.9em;
-			font-size: 2.5em;
+			font-size: 2.4em;
 			margin: 0 0.25em 0 0.25em;
 			opacity: 1;
 			outline: 0;
@@ -1804,6 +1816,35 @@ input, select, textarea {
 			-webkit-transition: opacity .25s ease-in-out;
 			-ms-transition: opacity .25s ease-in-out;
 			transition: opacity .25s ease-in-out;
+		}
+
+		#nav img {
+			width: 100%;
+		}
+
+	@media screen and (max-width: 423px) {
+
+			#nav a{
+				font-size: 2.3em;
+				margin-top: 5px;
+			}
+		}
+
+		@media screen and (max-width: 410px) {
+
+			#nav a{
+				font-size: 2.1em;
+				margin-top: 9px;
+			}
+		}
+
+		@media screen and (max-width: 366px) {
+
+			#nav a{
+				font-size: 2em;
+				margin-top: 12px;
+				
+			}
 		}
 
 			#nav a.icon:before {
@@ -2113,6 +2154,16 @@ input, select, textarea {
 					#main > .panel.intro header h1 {
 						line-height: 1.25em;
 						margin-bottom: 0;
+						font-family: 'tangerine', serif;
+						font-size: 90px;;
+						text-shadow: 4px 4px 4px #aaa;
+						font-weight: 400;
+					}
+
+				@media screen and (max-width: 489px) {
+						#main > .panel.intro header h1 {
+							font-size: 50px;;
+						}
 					}
 
 					#main > .panel.intro header p {
@@ -2217,9 +2268,8 @@ input, select, textarea {
 }
 
 #work p {
-	text-align: center;
+	text-align:justify;
 	color: black;
-	
 }
 
 #contact p {
@@ -2261,16 +2311,16 @@ input, select, textarea {
   }
 
 
-
-
   #ai h2{
 	display: flex;
     justify-content: center;
   }
 
-  #ai P{
+  #ai p{
 	text-align:justify;
+	color: #000;
   }
+
 
   #aiImage {
 	padding: 0;
@@ -2281,8 +2331,18 @@ input, select, textarea {
 	width: auto;
   }
 
+  #aiImage p{
+	text-align: center;
+	font-family:'Times New Roman', Times, serif;
+	font-size: larger;
+  }
+
+  .response-here {
+	 margin-top: 20%;
+  }
+
   #userInput{
-	width: 50%;
+	width: 90%;
 	display: flex;
 	align-self: center;
 	position: relative; /* Make sure the parent is not static */
@@ -2292,6 +2352,7 @@ input, select, textarea {
 
   #userInput input {
 	width: 100%;
+	
   }
   
   #submit-icon {
@@ -2300,7 +2361,6 @@ input, select, textarea {
 	transform: translateY(-50%);
 	margin-top: 50px;
   }
-
 
 
   #submit-icon button {
@@ -2313,7 +2373,6 @@ input, select, textarea {
 
 
 #contentImahe div {
-	
 	padding: 2em;
 	margin: 0;
 	display: flex;
@@ -2321,7 +2380,7 @@ input, select, textarea {
 	width: auto;
 	margin-top: 1%;
   }
-   
+
 	
 .ring
 {
@@ -2405,9 +2464,7 @@ input, select, textarea {
   }
 }
 
-.response-here{
-margin-top: 10%;
-}
+
 
 #product {
 	display: flex;
@@ -2416,54 +2473,30 @@ margin-top: 10%;
 }
 
 #product p{
-	color: rgb(24, 22, 22);
-	margin: 1em;
-	text-align: center;
+	line-height: normal;
+}
+.panel p:nth-child(2) {
+	color: #000;
+	margin: 0.5em;
+	text-align:justify;
+	font-size: 1.2em;
 }
 
-
-#product-box {
+.product-box {
 	position: relative;
-	max-width: 100%;
 	overflow: hidden;
-	border: 2px solid transparent; /* Start with a transparent border */
+	border: 2px solid transparent;
 	border-radius: 10px;
 	padding: 20px;
 	background-color: rgb(164, 184, 187);
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	max-width: 700px;
+	max-width: 644px;
 	margin: 0;
 	box-sizing: border-box;
 	margin: 0rem 0 2rem 0;
 	box-shadow: 20px 20px 10px grey;
-	animation: borderColorAnimation 3s linear infinite; /* Apply border color animation */
-  }
-  
-  @keyframes borderColorAnimation {
-	0% {
-	  border-color: red; /* Change border color at each keyframe */
-	}
-	25% {
-	  border-color: yellow;
-	}
-	50% {
-	  border-color: green;
-	}
-	75% {
-	  border-color: blue;
-	}
-	100% {
-	  border-color: red;
-	}
-  } 
-
-  #product-box p{
-	color: rgb(24, 22, 22);
-	text-align: justify;
-	margin: 1rem 0;
-	margin-top: 0.3em;
   }
 
 #product button{
@@ -2475,17 +2508,16 @@ margin-top: 10%;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-  #product-box img{
-	max-width: 100%;
-	height: auto;
-	transition: transform 0.5s ease, box-shadow 0.3s ease;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	padding: 5px;
+#product button:hover{
+	background-color: #2980b9;
+}
 
+  .product-box img{
+    width: 100%; 
+    height: auto;
   }
 
-  #product-box h2{
+  .product-box h2{
   font-size: 24px; 
   color: #333;
   text-align: center;
@@ -2495,39 +2527,36 @@ margin-top: 10%;
 
   }
 
-  .product-content p:first-child {
-	font-size: 20px;
-	color: rgb(80, 6, 17);
-	margin-top: 10px;
-	text-align: center;
-  }
+  .product-content p:nth-child(1) {
+	color: rgb(24, 22, 22);
+	margin: 0.5em;
+	text-align: justify;
+	font-size: 1.2em;
+}
 
-  #product-box .product-content p:nth-child(2) {
-	color: #368607;
+.product-content p:nth-child(2) {
+	color: green;
 	font-size: large;
 	font-weight: bolder;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-align: center;
   }
 
-
 .popup {
 	position: fixed;
 	bottom: 10px;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: rgba(0, 0, 0, 0.7);
 	color: white;
 	padding: 10px 20px;
 	border-radius: 5px;
 	font-size: 14px;
-	z-index: 9999;
+	z-index: 1;
 	width: auto;
 	display: none;
 	padding-top: 1.8rem;
 	transition: opacity 0.5s ease;
 }
-
 
   @media screen and (max-width: 756px),
 		 screen and (max-width: 416px),
@@ -2561,27 +2590,17 @@ margin-top: 10%;
 	}
 }
 
-
   /* Apply styles pages 2 */
-.img-gallery{
-	width: 70%;
-	margin: 0px auto 0px;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-	grid-gap: 30px;	
-}
-
 .img-gallery img{
 	width: 100%;
 	cursor: pointer;
 	transform: scale(1);
-	transition: transform 0.6s ease;
+	transition: transform 0.5s ease;
 	box-shadow: none;
 }
 
 .img-gallery img:hover{
-	transform: scale(1.1) rotate(-1deg);
-	border-radius: 20px;
+	transform: scale(1) rotate(1deg);
 	box-shadow: 0 32px 75px rgba(23, 23, 24, 0.2);
 }
 
@@ -2595,7 +2614,7 @@ margin-top: 10%;
 	display: none;
 	align-items: center;
 	justify-content: center;
-	z-index: 1;
+	z-index: 2;
 	
 }
 
@@ -2611,16 +2630,171 @@ margin-top: 10%;
 	to {transform: scale(1)}
   }
   
-
 .full-img span{
 	position: absolute;
-	top: 5%;
-	right: 5%;
-	font-size: 30px;
+	top: 1rem;
+	right: 1rem;
+	font-size: 3em;
 	color: #fff;
 	cursor: pointer;
 }
 
-#closeImage img{
-	height: 50px;
+
+#buttonContainer {
+    text-align: center;
 }
+
+#errMessage {
+    width: 100%;
+    margin: 0 auto;
+	margin-bottom: 0.5em;
+    display: block;
+    background-color: rgb(192, 31, 31);
+    color: rgb(247, 178, 50);
+    font-family: fantasy, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#messageInput {
+    resize: none;
+}
+
+.error-emphasis {
+    color: red;
+	font-size: large;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text horizontally */
+	width: 100%;
+    overflow: hidden;
+}
+
+#typing-text {
+	
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-bottom: 4px solid white;
+    animation: typing 3s steps(9, end), blink-caret 1s step-end infinite alternate;
+	box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.5) inset, 4px 0px 6px -4px rgba(0, 0, 0, 0.5) inset; /* Add box-shadow at the bottom and right side */
+}
+
+@keyframes typing {
+    0%, 1% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    0%, 20% {
+        border-color:red;
+    }
+    20%, 50% {
+        border-color: white;
+    }
+    60%, 100% {
+        border-color: green;
+    }
+    
+}
+
+.video-modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+
+.video-modal-content {
+	padding: 20px;
+	border-radius: 5px;
+	position: relative;
+	text-align: center; /* Center video horizontally */
+}
+
+.close-button {
+    position: fixed; 
+    top: 1rem; 
+    right: 1rem;
+    font-size: 3rem; 
+    cursor: pointer;
+    color: white;
+}
+
+.video-modal-content video {
+	max-width: 90%; /* Make the video responsive */
+	height: auto; /* Maintain the aspect ratio */
+}
+
+#work p img {
+	vertical-align: text-bottom;
+	display: inline-block; 
+}
+
+/* -------------------shine --------------------------*/
+.image-box img{
+	position: relative;
+	display: block;
+	padding: 0.5em;
+}
+
+.popular-block .image-box {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	border: 1px solid white;
+	padding: 0;
+	margin:0;
+  }
+
+.popular-block .inner-box:hover .image-box::before {
+  -webkit-animation: shine 1s;
+  animation: shine 1s;
+}
+
+.popular-block .image-box:before {
+  position: absolute;
+  top: 0;
+  left: -85%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .8) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .8)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .8) 100%);
+  -webkit-transform: skewX(-25deg);
+  -ms-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+  z-index: 1;
+}
+
+
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+/* -------------------shine --------------------------*/
