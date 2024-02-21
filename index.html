@@ -29,15 +29,17 @@
 		
 		<!-- email --->
 		<script
-		type="text/javascript"
-		src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-	 	 ></script>
-	  	<script type="text/javascript" defer>
-		(function () {
-		emailjs.init("DtvkdOnM8pSr6IPg9O6_X");
-		})();
-	  </script>
-		
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+			<script>
+				(function() {
+					emailjs.init({
+					publicKey: "egTslNcO3TH7hbpcr",
+					});
+				})();
+			 </script>
+		<!-- email --->
 	</head>
 	<body class="is-preload">
 
