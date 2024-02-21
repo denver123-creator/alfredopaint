@@ -1,1 +1,1 @@
-# alfredopaint.io
+https://alfredopaint.pages.dev/
