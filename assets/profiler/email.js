@@ -56,7 +56,7 @@ function sendMail() {
         message: `Subject: ${subjectInput.value} Message: ${messageInput.value}`
       };
   
-      const serviceID = "service_asbx5cp";
+      const serviceID = "service_d11rxmz";
       const templateID = "template_mjgsvsb";
 
       sendeMail.disabled = true; // to avoid double send
